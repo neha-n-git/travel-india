@@ -1,48 +1,67 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Explore India - Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Explore India</title>
+    <meta name="description" content="Photos from the Taj Mahal, Kerala backwaters and Goa beaches.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>Explore India!!</h1>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="./index.html" class="wordmark">Explore India</a>
 
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./index.html#places">Places</a>
-        <a href="./gallery.html">Gallery</a>
-        <a href="#">Contact</a>
-    </nav>
+        <nav aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./index.html#places">Places</a>
+            <a href="./gallery.html" class="current">Gallery</a>
+            <a href="./index.html#contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<section class="gallery">
-    <h2>Explore India Gallery</h2>
+<main>
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <p class="gallery-intro">A few frames from the road — more are added as we travel.</p>
 
-    <div class="gallery-container">
+        <div class="gallery-container">
 
-        <div class="gallery-card">
-            <img src="./images/tajmahal.jpg" alt="Taj Mahal">
-            <h3>Taj Mahal</h3>
+            <figure class="gallery-card">
+                <img src="./images/tajmahal.jpg" alt="The Taj Mahal's white marble facade reflected in its long garden pool at sunrise" loading="lazy" width="600" height="400">
+                <figcaption>
+                    <h3>Taj Mahal</h3>
+                    <p>Agra, Uttar Pradesh</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-card gallery-card--tall">
+                <img src="./images/kerala.jpg" alt="A traditional houseboat gliding through the palm-lined backwaters of Kerala" loading="lazy" width="600" height="500">
+                <figcaption>
+                    <h3>Kerala Backwaters</h3>
+                    <p>God's Own Country</p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img src="./images/goa.jpeg" alt="Waves rolling onto a wide sandy beach in Goa at golden hour" loading="lazy" width="600" height="400">
+                <figcaption>
+                    <h3>Goa Beaches</h3>
+                    <p>Sun, sand and sea</p>
+                </figcaption>
+            </figure>
+
         </div>
+    </section>
+</main>
 
-        <div class="gallery-card">
-            <img src="./images/kerala.jpg" alt="Kerala Backwaters">
-            <h3>Kerala Backwaters</h3>
-        </div>
-
-        <div class="gallery-card">
-            <img src="./images/goa.jpeg" alt="Goa Beaches">
-            <h3>Goa Beaches</h3>
-        </div>
-
-    </div>
-</section>
-
-<footer>
+<footer class="site-footer">
     <p>© 2026 Explore India</p>
 </footer>
 
@@ -50,4 +69,3 @@
 
 </body>
 </html>
-
