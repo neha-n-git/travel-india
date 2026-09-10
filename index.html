@@ -1,51 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Explore India</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore India — Incredible India Travel Guide</title>
+    <meta name="description" content="A traveller's guide to India: the Taj Mahal, Kerala's backwaters, and Goa's coastline.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Explore Incredible India!!</h1>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="./index.html" class="wordmark">Explore India</a>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Places</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="#">Contact</a>
-    </nav>
+        <nav aria-label="Primary">
+            <a href="./index.html" class="current">Home</a>
+            <a href="./index.html#places">Places</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./index.html#contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<section class="hero">
-    <h2>Discover Incredible India</h2>
-    <p>Experience culture, heritage and nature.</p>
+<main>
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Six thousand kilometres of coast, desert and monsoon forest — one country best seen slowly.</h1>
+            <p>From the marble inlay of Agra to the backwaters of Kerala and the shorelines of Goa, this guide covers where to go and what to expect when you get there.</p>
+            <a href="#places" class="btn">See the destinations</a>
+        </div>
+        <div class="hero-mark" aria-hidden="true">
+            <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 260 V150 A90 90 0 0 1 200 150 V260" fill="none" stroke="var(--saffron)" stroke-width="3"/>
+                <path d="M55 260 V170 A55 55 0 0 1 165 170 V260" fill="none" stroke="var(--brick)" stroke-width="3"/>
+                <circle cx="110" cy="60" r="8" fill="var(--indigo)"/>
+                <line x1="110" y1="0" x2="110" y2="52" stroke="var(--indigo)" stroke-width="3"/>
+            </svg>
+        </div>
+    </section>
 
-    <button onclick="showMessage()">
-        Explore More
-    </button>
-</section>
+    <section class="places" id="places">
+        <h2>Three places to start with</h2>
 
-<section class="places">
+        <div class="postcards">
+            <article class="postcard">
+                <span class="stamp">Agra, Uttar Pradesh</span>
+                <h3>Taj Mahal</h3>
+                <p>Arrive at the east gate before sunrise. The marble changes colour through the morning, and the crowds arrive by mid-day.</p>
+                <p class="detail">Best months: Oct – Mar</p>
+            </article>
 
-    <div class="card">
-        <h3>Taj Mahal</h3>
-        <p>Agra, Uttar Pradesh</p>
-    </div>
+            <article class="postcard postcard--shift">
+                <span class="stamp">Kerala</span>
+                <h3>Backwaters</h3>
+                <p>A network of lagoons and canals behind the Malabar coast, best explored slowly on a converted rice barge.</p>
+                <p class="detail">Best months: Sep – Mar</p>
+            </article>
 
-    <div class="card">
-        <h3>Kerala Backwaters</h3>
-        <p>God's Own Country</p>
-    </div>
+            <article class="postcard">
+                <span class="stamp">Goa</span>
+                <h3>Beaches</h3>
+                <p>Portuguese-era churches and spice markets sit inland, minutes from a coastline that runs from Baga to Palolem.</p>
+                <p class="detail">Best months: Nov – Feb</p>
+            </article>
+        </div>
+    </section>
 
-    <div class="card">
-        <h3>Goa Beaches</h3>
-        <p>Sun, Sand and Sea</p>
-    </div>
+    <section class="contact" id="contact">
+        <h2>Planning a trip?</h2>
+        <p>Send questions about routes, timing or visas and we'll point you in the right direction.</p>
+        <a href="mailto:hello@exploreindia.example" class="btn btn--dark">Email us</a>
+    </section>
+</main>
 
-</section>
-
-<footer>
+<footer class="site-footer">
     <p>© 2026 Explore India</p>
 </footer>
 
