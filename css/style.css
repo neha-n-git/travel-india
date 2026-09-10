@@ -282,6 +282,7 @@ nav a.current {
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: dense;
     gap: 24px;
 }
 
@@ -289,6 +290,7 @@ nav a.current {
     margin: 0;
     background: var(--paper);
     border: 1px solid #ddd0b3;
+    overflow: hidden;
 }
 
 .gallery-card--tall {
@@ -296,14 +298,16 @@ nav a.current {
 }
 
 .gallery-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
     display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
 }
 
 .gallery-card--tall img {
-    height: 460px;
+    aspect-ratio: 3 / 5;
 }
 
 .gallery-card figcaption {
@@ -357,8 +361,12 @@ nav a.current {
         grid-template-columns: 1fr;
     }
 
+    .gallery-card--tall {
+        grid-row: auto;
+    }
+
     .gallery-card--tall img,
     .gallery-card img {
-        height: 240px;
+        aspect-ratio: 3 / 2;
     }
 }
